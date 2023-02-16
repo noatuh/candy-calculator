@@ -21,13 +21,7 @@
             <div>
             <h3>Reese's Miniatures are small bite-sized chocolates that consist of a peanut butter filling coated with a layer of milk chocolate. They are made by The Hershey Company and are a popular candy in the United States. Reese's Miniatures are similar in taste and texture to the larger Reese's Peanut Butter Cups, but are smaller in size and packaged in a variety of fun and festive wrappers. They are often sold in bags or containers and are a favorite treat for many people who enjoy the combination of peanut butter and chocolate.</h2>
             </div>
-            <label>Price per item:</label>
-                <span id="pricePerItem">$1.50</span>
-                    <br>
-            <label>Enter quantity:</label>
-                <input type="number" id="quantityInput">
-                    <button onclick="calculate()">Calculate</button>
-                    <br>
+            <button onclick="calculate()">Calculate</button>
             <div>
             <label>Number of Items:</label>
                 <span id="quantity"></span>
@@ -45,7 +39,7 @@
         <footer>&copy;Mark Knight, EKU, CSC160</footer>
         <script>
             function calculate() {
-                const quantity = parseInt(document.getElementById("quantityInput").value);
+                const quantity = parseInt(prompt("Enter quantity:"));
                 const pricePerItem = 1.5;
                 const taxRate = 0.06;
                 const subtotal = quantity * pricePerItem;
@@ -55,7 +49,7 @@
                 document.getElementById("quantity").textContent = quantity;
                 document.getElementById("tax").textContent = "$" + tax.toFixed(2);
                 document.getElementById("totalPrice").textContent = "$" + totalPrice.toFixed(2);
-                    }
+            }
         </script>
     </body>
 </html>
